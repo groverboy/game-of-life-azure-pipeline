@@ -10,6 +10,7 @@
 */
 
 /* Test comment #1 */
+/* Test comment #2 */
 
 node ("linux") {
 
@@ -48,8 +49,3 @@ node ("linux") {
 def ensureMaven() {
     env.PATH = "${tool 'maven-3.3'}/bin:${env.PATH}"
 }
-
-
-
-
-
