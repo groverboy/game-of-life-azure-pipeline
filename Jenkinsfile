@@ -13,12 +13,12 @@ node ("linux") {
 
     def local_path="gameoflife-web/target"
     def war="gameoflife.war"
-    def target="/site/wwwroot/webapps"
+    def target="d:\home\site\wwwroot\bin\jetty\webapps"
 
     ensureMaven()
 
     stage "Checkout"
-    git branch: 'azure-pipeline', url: 'https://github.com/harniman/game-of-life'
+    git branch: 'azure-pipeline', url: 'https://github.com/groverboy/game-of-life-azure-pipeline'
 
     stage "Build"
 
