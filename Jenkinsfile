@@ -14,6 +14,7 @@
 /* Test comment #3 */
 /* Test comment #4 */
 /* Test comment #5 */
+/* Test comment #6 */
 
 node ("linux") {
 
