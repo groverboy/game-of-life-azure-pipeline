@@ -20,7 +20,7 @@ node ("linux") {
 
     def local_path="gameoflife-web/target"
     def war="gameoflife.war"
-    def target="d:\home\site\wwwroot\bin\jetty\webapps"
+    def target="d:/home/site/wwwroot/bin/jetty/webapps"
 
     ensureMaven()
 
