@@ -43,7 +43,7 @@ node ("linux") {
         passwordVariable: '_password', 
         usernameVariable: '_user']]) {
 
-        def deploycmd = "curl -T ${local_path}/${war} ftps://\"${env._user}\":${env._password}@${env.azureHost}${target}/"
+        def deploycmd = "curl -T ${local_path}/${war} ftps://\"${env._user}\":\"${env._password}\"@${env.azureHost}/${target}/"
         echo deploycmd
         sh deploycmd
     }
