@@ -25,7 +25,8 @@ node ("linux") {
 
     def local_path="gameoflife-web/target"
     def war="gameoflife.war"
-    def target="d:/home/site/wwwroot/bin/jetty/webapps"
+    def target="/site/wwwroot/bin/jetty-distribution-9.1.2.v20140210/webapps"
+    //d:\home\site\wwwroot\bin\jetty
 
     ensureMaven()
 
@@ -43,7 +44,7 @@ node ("linux") {
         passwordVariable: '_password', 
         usernameVariable: '_user']]) {
 
-        def deploycmd = "curl -T ${local_path}/${war} ftps://\"${env._user}\":\"${env._password}\"@${env.azureHost}/${target}/"
+        def deploycmd = "curl -T ${local_path}/${war} ftps://\"${env._user}\":\"${env._password}\"@${env.azureHost}${target}/"
         echo deploycmd
         sh deploycmd
     }
