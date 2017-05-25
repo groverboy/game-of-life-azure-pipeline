@@ -9,7 +9,6 @@
 
 */
 
-/* Test comment #1 */
 
 node ("linux") {
 
